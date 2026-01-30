@@ -23,6 +23,7 @@ const handleLogout = () => {
         <RouterLink :to="{ name: 'dashboard' }" class="block px-4 py-2.5 rounded hover:bg-slate-800 transition" active-class="bg-slate-800 text-white">
           Dashboard
         </RouterLink>
+        <RouterLink :to="{ name: 'bookings.index' }" active-class="bg-slate-800 text-white">Lịch hẹn</RouterLink>
         <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Lịch hẹn</a>
         <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Dịch vụ</a>
       </nav>

@@ -22,11 +22,11 @@ const router = createRouter({
           name: 'dashboard',
           component: () => import('@/views/DashboardView.vue')
         },
-        {
-          path: '/staff/list',
-          name: 'staff.list',
-          component: () => import('@/views/StaffView.vue'),
-        },
+         {
+          path: 'bookings/list', // Thêm đường dẫn /bookings
+          name: 'bookings.index',
+          component: () => import('@/views/bookings/BookingListView.vue')
+        }
       ]
     }
   ],
