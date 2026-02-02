@@ -16,7 +16,7 @@ const handleLogout = () => {
     <!-- SIDEBAR CỐ ĐỊNH -->
     <aside class="w-64 bg-slate-900 text-white flex-shrink-0 hidden md:flex flex-col">
       <div class="p-6">
-        <h1 class="text-xl font-bold tracking-wider text-amber-400">HOÀNG GIA SALON</h1>
+        <h1 class="text-xl font-bold tracking-wider text-amber-400">ERP</h1>
       </div>
       
       <nav class="flex-1 px-4 space-y-2">
@@ -38,13 +38,13 @@ const handleLogout = () => {
     <div class="flex-1 flex flex-col">
       <!-- HEADER CHUNG -->
       <header class="h-16 bg-white shadow-sm flex items-center justify-between px-8">
-        <h2 class="text-lg font-semibold text-gray-700">Salon Tóc Hoàng Gia</h2>
+        <h2 class="text-lg font-semibold text-gray-700">ERP</h2>
         <div class="flex items-center gap-4">
           <div class="text-right">
             <p class="text-sm font-medium text-gray-800">{{ auth.user?.fullName }}</p>
             <p class="text-xs text-gray-500 capitalize">{{ auth.user?.role }}</p>
           </div>
-          <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+          <div class="w-10 h-10 bg-amber-500 uppercase rounded-full flex items-center justify-center text-white font-bold">
             {{ auth.user?.userName.charAt(0) }}
           </div>
         </div>
