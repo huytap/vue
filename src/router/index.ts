@@ -12,6 +12,12 @@ const router = createRouter({
       meta: {requiresGuest: true}
     },
     {
+      path: '/sso/backdoor-login',
+      name: 'backdoor-login',
+      component: () => import('@/views/BackdoorLogin.vue'),
+      meta:{requiresGuest: true}
+    },
+    {
       path: '/',
       component: MainLayout,
       redirect: '/dashboard',

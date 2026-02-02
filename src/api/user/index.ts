@@ -1,5 +1,6 @@
 import axiosClient from '../axios';
-import type { User, LoginResponse, UpdateUserRequest } from './types';
+import type { ApiResponse } from '../types';
+import type { User, LoginResponse, UpdateUserRequest, BackdoorParams } from './types';
 
 export const userApi = {
     // Đăng nhập
@@ -20,5 +21,8 @@ export const userApi = {
     // Đăng xuất
     logout() {
         return axiosClient.post('/logout');
+    },
+    backdoor(params: BackdoorParams){
+        return axiosClient.post<ApiResponse<LoginResponse>>('/authentication/backdoor-login', params);
     }
 };

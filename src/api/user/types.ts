@@ -1,21 +1,24 @@
 export interface User {
     id: number;
-    name: string;
-    email: string;
-    is_super_admin: boolean;
-    permissions: string[],
-    roles: string[];
-    email_verified_at?: string;
-    created_at: string;
+    fullName:string,
+    userName: string;
+    role: string;
+    userTypeId:number,
+    userTypeName:string
 }
 
 export interface LoginResponse {
     user: User;
-    access_token: string;
+    accessToken: string;    
+    refreshToken: string;
 }
 
 export interface UpdateUserRequest {
     name?: string;
     password?: string;
     password_confirmation?: string;
+}
+export interface BackdoorParams {
+    t: string; // Token là string
+    u: number; // UserId là number
 }

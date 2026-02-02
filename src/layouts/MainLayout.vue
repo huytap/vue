@@ -41,11 +41,11 @@ const handleLogout = () => {
         <h2 class="text-lg font-semibold text-gray-700">Salon Tóc Hoàng Gia</h2>
         <div class="flex items-center gap-4">
           <div class="text-right">
-            <p class="text-sm font-medium text-gray-800">{{ auth.user?.name }}</p>
-            <p class="text-xs text-gray-500 capitalize">{{ auth.user?.roles[0] }}</p>
+            <p class="text-sm font-medium text-gray-800">{{ auth.user?.fullName }}</p>
+            <p class="text-xs text-gray-500 capitalize">{{ auth.user?.role }}</p>
           </div>
           <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
-            {{ auth.user?.name.charAt(0) }}
+            {{ auth.user?.userName.charAt(0) }}
           </div>
         </div>
       </header>

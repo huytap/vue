@@ -18,3 +18,8 @@ export interface PaginatedResponse<T> {
         next: string | null;
     };
 }
+export interface ApiResponse<T> {
+    statusCode: number;
+    message: string;
+    data: T;
+}
