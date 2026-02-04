@@ -68,7 +68,11 @@ export function cleanFilterParams<T extends Record<string, any>>(params: T): Par
     return acc;
   }, {} as Partial<T>);
 }
-
+export interface ApiResponse<T> {
+    statusCode: number;
+    message: string;
+    data: T;
+}
 /**
  * Merge filter params
  */

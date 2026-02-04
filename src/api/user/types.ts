@@ -2,11 +2,8 @@ export interface User {
     id: number;
     name: string;
     email: string;
-    is_super_admin: boolean;
-    permissions: string[],
-    roles: string[];
-    email_verified_at?: string;
-    created_at: string;
+    role: string;
+    merchant_id?: number;
 }
 
 export interface LoginResponse {

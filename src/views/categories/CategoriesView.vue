@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { bookingApi } from '@/api/booking';
+import { bookingApi } from '@/api/categories';
 import type { PaginatedResponse } from '@/api/types';
-import type { Booking, BookingFilters } from '@/api/booking/types';
+import type { Booking, BookingFilters } from '@/api/categories/types';
 import BasePagination from '@/components/BasePagination.vue';
-import { FILTER_OPTIONS, STATUS_CONFIG } from '@/api/booking/filters';
+import { FILTER_OPTIONS, STATUS_CONFIG } from '@/api/categories/filters';
 import { formatDateTime } from '@/utils/format';
 
 const bookingsData = ref<PaginatedResponse<Booking> | null>(null);

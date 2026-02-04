@@ -16,14 +16,14 @@ const handleLogout = () => {
     <!-- SIDEBAR CỐ ĐỊNH -->
     <aside class="w-64 bg-slate-900 text-white flex-shrink-0 hidden md:flex flex-col">
       <div class="p-6">
-        <h1 class="text-xl font-bold tracking-wider text-amber-400">HOÀNG GIA SALON</h1>
+        <h1 class="text-xl font-bold tracking-wider text-amber-400">Quản lý tồn kho</h1>
       </div>
       
       <nav class="flex-1 px-4 space-y-2">
         <RouterLink :to="{ name: 'dashboard' }" class="block px-4 py-2.5 rounded hover:bg-slate-800 transition" active-class="bg-slate-800 text-white">
           Dashboard
         </RouterLink>
-        <RouterLink :to="{ name: 'bookings.index' }" active-class="bg-slate-800 text-white">Lịch hẹn</RouterLink>
+        <RouterLink :to="{ name: 'merchants.index' }" active-class="bg-slate-800 text-white">Đối tác</RouterLink>
         <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Lịch hẹn</a>
         <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Dịch vụ</a>
       </nav>
@@ -43,9 +43,9 @@ const handleLogout = () => {
         <div class="flex items-center gap-4">
           <div class="text-right">
             <p class="text-sm font-medium text-gray-800">{{ auth.user?.name }}</p>
-            <p class="text-xs text-gray-500 capitalize">{{ auth.user?.roles[0] }}</p>
+            <p class="text-xs text-gray-500 capitalize">{{ auth.user?.role }}</p>
           </div>
-          <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+          <div class="w-10 h-10 bg-amber-500 uppercase rounded-full flex items-center justify-center text-white font-bold">
             {{ auth.user?.name.charAt(0) }}
           </div>
         </div>

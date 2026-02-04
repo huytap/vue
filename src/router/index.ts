@@ -23,9 +23,9 @@ const router = createRouter({
           component: () => import('@/views/DashboardView.vue')
         },
          {
-          path: 'bookings/list', // Thêm đường dẫn /bookings
-          name: 'bookings.index',
-          component: () => import('@/views/bookings/BookingListView.vue')
+          path: 'merchants/list',
+          name: 'merchants.index',
+          component: () => import('@/views/merchants/MerchantsView.vue')
         }
       ]
     }

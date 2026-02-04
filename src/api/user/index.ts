@@ -1,10 +1,11 @@
 import axiosClient from '../axios';
+import type { ApiResponse } from '../types';
 import type { User, LoginResponse, UpdateUserRequest } from './types';
 
 export const userApi = {
     // Đăng nhập
     login(credentials: Record<string, string>) {
-        return axiosClient.post<LoginResponse>('/login', credentials);
+        return axiosClient.post<ApiResponse<LoginResponse>>('/auth/login', credentials);
     },
 
     // Lấy thông tin user hiện tại (thường gọi khi reload app)

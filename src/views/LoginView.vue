@@ -23,8 +23,8 @@ const handleLogin = async () => {
   try {
     const response = await userApi.login(form.value);
     // Lưu thông tin vào Pinia Store
-    auth.setAuth(response.data.user, response.data.access_token);
-    
+    const data = response.data;
+    auth.setAuth(data.data.user, data.data.access_token);
     // Chuyển hướng về trang Dashboard
     router.push({ name: 'dashboard' });
   } catch (err: any) {
