@@ -5,7 +5,7 @@ import type { User, LoginResponse, UpdateUserRequest, BackdoorParams } from './t
 export const userApi = {
     // Đăng nhập
     login(credentials: Record<string, string>) {
-        return axiosClient.post<LoginResponse>('/login', credentials);
+        return axiosClient.post<LoginResponse>('/authentication/login', credentials);
     },
 
     // Lấy thông tin user hiện tại (thường gọi khi reload app)

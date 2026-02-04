@@ -23,8 +23,9 @@ const handleLogout = () => {
         <RouterLink :to="{ name: 'dashboard' }" class="block px-4 py-2.5 rounded hover:bg-slate-800 transition" active-class="bg-slate-800 text-white">
           Dashboard
         </RouterLink>
-        <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Lịch hẹn</a>
-        <a href="#" class="block px-4 py-2.5 rounded text-slate-400 hover:bg-slate-800 hover:text-white transition">Dịch vụ</a>
+        <RouterLink :to="{ name: 'inventory.forcast' }" class="block px-4 py-2.5 rounded hover:bg-slate-800 transition" active-class="bg-slate-800 text-white">
+          Tính tồn kho giấy
+        </RouterLink>
       </nav>
 
       <div class="p-4 border-t border-slate-800">
@@ -50,7 +51,6 @@ const handleLogout = () => {
         </div>
       </header>
 
-      <!-- NỘI DUNG THAY ĐỔI (Giống @yield('content') trong Laravel) -->
       <main class="p-8">
         <RouterView />
       </main>

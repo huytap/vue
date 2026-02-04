@@ -29,9 +29,9 @@ const router = createRouter({
           component: () => import('@/views/DashboardView.vue')
         },
         {
-          path: '/staff/list',
-          name: 'staff.list',
-          component: () => import('@/views/StaffView.vue'),
+          path: '/inventory/calculator-forcast',
+          name: 'inventory.forcast',
+          component: () => import('@/views/inventory/CalculatorView.vue'),
         },
       ]
     }

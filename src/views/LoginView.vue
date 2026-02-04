@@ -9,7 +9,7 @@ const auth = useAuthStore();
 
 // Khai báo Form dữ liệu
 const form = ref({
-  email: '',
+  username: '',
   password: '',
 });
 
@@ -49,8 +49,8 @@ const handleLogin = async () => {
         <div>
           <label class="block text-sm font-medium text-gray-700">Email</label>
           <input 
-            v-model="form.email"
-            type="email" 
+            v-model="form.username"
+            type="text" 
             required
             class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
             placeholder="admin@example.com"
